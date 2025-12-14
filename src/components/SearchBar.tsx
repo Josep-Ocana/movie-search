@@ -23,7 +23,7 @@ const SearchBar = () => {
           type="text"
           className="bg-white p-2 rounded-lg w-full"
           value={query}
-          placeholder="Escribe el título de una pelicula"
+          placeholder="Buscar una película"
           onChange={(e) => setQuery(e.target.value)}
         />
         <button
