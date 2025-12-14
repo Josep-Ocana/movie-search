@@ -22,7 +22,6 @@ export function useMovies() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         dispatch({ type: "FETCH_SUCCESS", payload: data.results });
       })
       .catch(() => {
@@ -33,5 +32,8 @@ export function useMovies() {
       });
   };
 
-  return { state, search };
+  return {
+    state,
+    search,
+  };
 }

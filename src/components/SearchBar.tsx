@@ -8,20 +8,16 @@ const SearchBar = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Validación
-    if (query.trim() === "") {
-      console.log("El campo no puede estar vacio");
-      return;
-    }
 
     search(query);
+    setQuery("");
   };
 
   return (
     <>
       <form
         onSubmit={handleSubmit}
-        className="mx-auto bg-blue-950 shadow-lg rounded-lg p-4"
+        className="flex flex-col mx-auto bg-blue-950 w-full sm:w-2/3 shadow-lg rounded-lg p-4 space-y-3 mb-5"
       >
         <input
           type="text"
@@ -30,6 +26,15 @@ const SearchBar = () => {
           placeholder="Escribe el título de una pelicula"
           onChange={(e) => setQuery(e.target.value)}
         />
+        <button
+          className={`bg-amber-200 text-center w-full sm:w-1/3 p-2 rounded-lg mx-auto ${
+            query.trim() === ""
+              ? "cursor-not-allowed opacity-50"
+              : " hover:bg-amber-300"
+          } `}
+        >
+          Buscar
+        </button>
       </form>
     </>
   );

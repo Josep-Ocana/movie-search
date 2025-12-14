@@ -1,0 +1,25 @@
+import { useMovies } from "../hooks/useMovies";
+import Card from "./Card";
+
+const Home = () => {
+  const { state } = useMovies();
+  console.log(state.movies);
+
+  return (
+    <>
+      {state.loading ? (
+        <p>Cargando</p>
+      ) : (
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-auto ">
+            {state.movies.map((movie) => (
+              <Card key={movie.id} movie={movie} />
+            ))}
+          </div>
+        </>
+      )}
+    </>
+  );
+};
+
+export default Home;
