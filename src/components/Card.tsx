@@ -11,7 +11,7 @@ const Card = ({ movie }: CardProps) => {
   return (
     <>
       <div
-        className={`w-full aspect-[2/3] mx-auto mb-3 shadow-lg rounded-lg transition-opacity duration-500${
+        className={`w-full aspect-[2/3] mx-auto mb-3 shadow-lg rounded-lg transition-opacity duration-500 ${
           isImageLoaded ? "opacity-100" : "opacity-0"
         }`}
       >

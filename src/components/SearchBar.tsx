@@ -27,11 +27,9 @@ const SearchBar = () => {
           onChange={(e) => setQuery(e.target.value)}
         />
         <button
-          className={`bg-amber-200 text-center w-full sm:w-1/3 p-2 rounded-lg mx-auto ${
-            query.trim() === ""
-              ? "cursor-not-allowed opacity-50"
-              : " hover:bg-amber-300"
-          } `}
+          disabled={query.trim() === ""}
+          className="bg-amber-200 text-center w-full sm:w-1/3 p-2 rounded-lg mx-auto ${
+            disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-amber-300"
         >
           Buscar
         </button>
