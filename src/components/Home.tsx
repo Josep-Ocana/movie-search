@@ -3,7 +3,6 @@ import Card from "./Card";
 
 const Home = () => {
   const { state } = useMovies();
-  console.log(state.movies);
 
   return (
     <>
