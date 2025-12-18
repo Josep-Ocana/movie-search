@@ -17,7 +17,7 @@ const SearchBar = () => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col mx-auto bg-blue-950 w-full sm:w-2/3 shadow-lg rounded-lg p-4 space-y-3 mb-5"
+        className="flex flex-col mx-auto bg-yellow-500 w-full sm:w-2/3 shadow-lg rounded-lg p-4 space-y-3 mb-5"
       >
         <input
           type="text"
@@ -28,8 +28,8 @@ const SearchBar = () => {
         />
         <button
           disabled={query.trim() === ""}
-          className="bg-amber-200 text-center w-full sm:w-1/3 p-2 rounded-lg mx-auto ${
-            disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-amber-300"
+          className=" bg-blue-700 hover:bg-blue-800 text-white text-center w-full sm:w-1/3 p-2 rounded-lg mx-auto ${
+            disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-gray-300"
         >
           Buscar
         </button>
