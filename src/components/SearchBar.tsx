@@ -17,7 +17,7 @@ const SearchBar = () => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col mx-auto bg-yellow-500 w-full sm:w-2/3 shadow-lg rounded-lg p-4 space-y-3 mb-5"
+        className="flex flex-col mx-auto bg-yellow-500 w-full sm:w-2/3 shadow-lg rounded-lg p-4 space-y-3 mb-10"
       >
         <input
           type="text"
